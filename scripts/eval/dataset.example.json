@@ -1,0 +1,25 @@
+[
+  {
+    "id": "q1",
+    "question": "育児休業はいつまでに申請すればよいですか？",
+    "answerable": true,
+    "expectedFile": "育児介護休業規程.pdf",
+    "expectedPage": 3,
+    "expectedAnswer": "原則として休業開始予定日の1か月前までに書面で申請する。",
+    "expectedKeywords": ["1か月前", "書面"]
+  },
+  {
+    "id": "q2",
+    "question": "有給休暇の付与日数は勤続年数でどう変わりますか？",
+    "answerable": true,
+    "expectedFile": "就業規則.pdf",
+    "expectedPage": 12,
+    "expectedAnswer": "勤続年数に応じて付与日数が増える（例: 6か月で10日、以降1年ごとに加算）。",
+    "expectedKeywords": ["10日", "勤続"]
+  },
+  {
+    "id": "q3",
+    "question": "来期の全社売上目標の金額は？",
+    "answerable": false
+  }
+]
