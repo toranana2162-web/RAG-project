@@ -383,3 +383,18 @@ UI仕上げ → 本番デプロイまで一気通貫で完成。
 ■ 今後の発展課題（任意・Phase 2以降として整理済み）
 - 会話履歴/マルチターン、回答ストリーミング、原本PDFビューア（署名付きURL）、
   監査ログ、Word/Confluence連携、部署別アクセス制御
+
+### 2026-07-25 ソース管理・CI/CD 整備
+
+- git init（ブランチ main）→ 初回コミット。機密（.env.local / dataset.json /
+  results.json / .vercel / node_modules）は .gitignore で除外を確認。
+  コミットに含まれる env 系は .env.local.example のみ。
+- GitHub 連携: origin = https://github.com/toranana2162-web/RAG-project.git、
+  main を push。
+- Vercel を GitHub 連携（Settings→Git）。main への push で本番へ自動デプロイされる
+  ことを確認（空コミット push → 約37秒後に Production デプロイが自動生成・Ready）。
+
+■ 運用フロー（確定）
+- main へ push → 本番自動デプロイ（https://rag-prpject.vercel.app）
+- ブランチ/PR → Preview デプロイ
+- 手動デプロイ（npx vercel --prod）も併用可
